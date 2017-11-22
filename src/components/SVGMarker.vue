@@ -66,7 +66,6 @@ export default {
     if (this.icon) {
       options.icon = this.icon;
     }
-
     // options.draggable = this.draggable;
     this.mapObject = new L.Marker.SVGMarker(this.latLng, options);
     eventsBinder(this, this.mapObject, events);
