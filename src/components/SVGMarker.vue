@@ -8,6 +8,8 @@
 
 import eventsBinder from '../utils/eventsBinder.js';
 import propsBinder from '../utils/propsBinder.js';
+/* eslint-disable no-new */
+import '../vendor/svg-icon.js'
 
 const events = [
   'click',
@@ -65,8 +67,8 @@ export default {
       options.icon = this.icon;
     }
 
-    options.draggable = this.draggable;
-    this.mapObject = L.marker(this.latLng, options);
+    // options.draggable = this.draggable;
+    this.mapObject = new L.Marker.SVGMarker(latlng, options);
     eventsBinder(this, this.mapObject, events);
     propsBinder(this, this.mapObject, props);
     if (this.$parent._isMounted) {
