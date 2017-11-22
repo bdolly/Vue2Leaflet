@@ -68,7 +68,7 @@ export default {
     }
 
     // options.draggable = this.draggable;
-    this.mapObject = new L.Marker.SVGMarker(latLng, options);
+    this.mapObject = new L.Marker.SVGMarker(this.latLng, options);
     eventsBinder(this, this.mapObject, events);
     propsBinder(this, this.mapObject, props);
     if (this.$parent._isMounted) {
